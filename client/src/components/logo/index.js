@@ -3,13 +3,13 @@ import Avatar from "@mui/material/Avatar";
 import PropTypes from "prop-types";
 
 function Logo(props) {
-  const { width, height } = props;
+  const { size } = props;
   return (
     <Avatar
       alt="mythic plus friends logo"
       src="/images/Finished_MythicLogos-1.png"
       component="p"
-      sx={{ width: width, height: height }}
+      sx={{ width: size, height: size }}
     />
   );
 }
@@ -17,8 +17,7 @@ function Logo(props) {
 export default Logo;
 
 Logo.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
+  size: PropTypes.number,
 };
 
-Logo.defaultProps = { width: 245, height: 245 };
+Logo.defaultProps = { size: 245 };
