@@ -5,7 +5,7 @@ import Social from './components/social';
 function App() {
   return (
     <main className="App">
-      <Social icon="facebook" link="http://www.facebook.com" />
+      <Social type="facebook" link="http://www.facebook.com" />
     </main>
   );
 }
