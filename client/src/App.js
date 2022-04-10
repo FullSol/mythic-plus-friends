@@ -3,11 +3,7 @@ import "./App.css";
 import SiteIntro from "./components/siteIntro";
 
 function App() {
-  return (
-    <main className="App">
-      <SiteIntro />
-    </main>
-  );
+  return <main className="App" />;
 }
 
 export default App;
