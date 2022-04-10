@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from "@mui/material/Avatar";
 import PropTypes from "prop-types";
 
-function Logo(props) {
+const Logo = (props) => {
   const { size } = props;
   return (
     <Avatar
@@ -12,7 +12,7 @@ function Logo(props) {
       sx={{ width: size, height: size }}
     />
   );
-}
+};
 
 export default Logo;
 
