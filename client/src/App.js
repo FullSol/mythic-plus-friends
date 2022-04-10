@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import DiscordBtn from "./components/buttons";
+import Logo from "./components/logo";
 
 function App() {
   return (
     <main className="App">
-      <DiscordBtn text="Join our discrod server" />
+      <Logo />
     </main>
   );
 }
