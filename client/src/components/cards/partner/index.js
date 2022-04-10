@@ -10,6 +10,7 @@ function PartnerCard(props) {
   return (
     <Paper
       sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      elevation={0}
     >
       <Link
         href={link}
