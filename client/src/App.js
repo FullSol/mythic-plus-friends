@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import Social from './components/social';
+import React from "react";
+import "./App.css";
+import Social from "./components/social";
 
 function App() {
   return (
