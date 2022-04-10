@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import { AcademyCard } from "./components/cards";
+import { PartnerCard } from "./components/cards";
 
 function App() {
   return (
     <main className="App">
-      <AcademyCard />
+      <PartnerCard />
     </main>
   );
 }
