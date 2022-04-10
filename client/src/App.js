@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Logo from "./components/logo";
+import { AcademyCard } from "./components/cards";
 
 function App() {
   return (
     <main className="App">
-      <Logo />
+      <AcademyCard />
     </main>
   );
 }
