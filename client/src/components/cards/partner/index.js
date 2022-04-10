@@ -8,10 +8,7 @@ import Link from "@mui/material/Link";
 function PartnerCard(props) {
   const { img, link, name } = props;
   return (
-    <Paper
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      elevation={0}
-    >
+    <Paper elevation={0}>
       <Link
         href={link}
         sx={{ textDecoration: "none", color: "text.secondary" }}
@@ -25,8 +22,7 @@ function PartnerCard(props) {
             height: 228,
           }}
         />
-
-        <Typography variant="h4" component="p" sx={{ textAlign: "center" }}>
+        <Typography variant="h4" component="p">
           {name}
         </Typography>
       </Link>
