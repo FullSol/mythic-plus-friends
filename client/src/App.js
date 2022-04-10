@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Social from "./components/social";
+import DiscordBtn from "./components/buttons";
 
 function App() {
   return (
     <main className="App">
-      <Social type="facebook" link="http://www.facebook.com" />
+      <DiscordBtn text="Join our discrod server" />
     </main>
   );
 }
