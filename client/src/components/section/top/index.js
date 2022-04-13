@@ -14,16 +14,28 @@ import Social from "../../social";
 
 import DiscordBtn from "../../buttons";
 
-// const StyledBox = styled(Box)`
-//   display: flex;
-//   gap: 32px;
-// `;
-
 const LogoBox = styled(Box)`
   position: absolute;
   top: -96px;
   right: -64px;
   z-index: -1;
+`;
+
+const SectionGrid = styled(Grid)`
+  position: relative;
+  padding: 32px 0 32px 0;
+  &::after {
+    content: "";
+    background-image: url("/images/Progenitor.jpg");
+    opacity: 0.36;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+  }
 `;
 
 function TopSection() {
@@ -48,8 +60,8 @@ function TopSection() {
   }
 
   return (
-    <Grid component="section" sx={{ marginTop: "64px" }}>
-      <LogoBox component="p">
+    <SectionGrid component="section">
+      <LogoBox component="p" sx={{ opacity: "100% !important" }}>
         <Logo />
       </LogoBox>
       <TitleCard title={title} subtitle={subtitle} description={description} />
@@ -70,7 +82,7 @@ function TopSection() {
           <DiscordBtn text={discord.text} link={discord.link} />
         </Grid>
       </Box>
-    </Grid>
+    </SectionGrid>
   );
 }
 
