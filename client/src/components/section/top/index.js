@@ -19,11 +19,22 @@ const LogoBox = styled(Box)`
   top: -96px;
   right: -64px;
   z-index: -1;
+  @media (min-width: 900px) {
+    top: -50px;
+    right: 80px;
+  }
+  @media (min-width: 1200px) {
+    top: 80px;
+    right: 85px;
+  }
 `;
 
 const SectionGrid = styled(Grid)`
   position: relative;
   padding: 32px 0 32px 0;
+  @media (min-width: 900px) {
+    height: 100vh;
+  }
   &::after {
     content: "";
     background-image: url("/images/Progenitor.jpg");
@@ -35,6 +46,20 @@ const SectionGrid = styled(Grid)`
     right: 0;
     position: absolute;
     z-index: -2;
+  }
+`;
+
+const SocialBox = styled(Box)`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 32px;
+  @media (min-width: 900px) {
+    position: absolute;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    bottom: 100px;
+    left: 200px;
+    width: 100%;
   }
 `;
 
@@ -65,10 +90,7 @@ function TopSection() {
         <Logo />
       </LogoBox>
       <TitleCard title={title} subtitle={subtitle} description={description} />
-      <Box
-        component="section"
-        sx={{ display: "flex", flexFlow: "column nowrap", gap: "32px" }}
-      >
+      <SocialBox component="section">
         <Grid
           component="p"
           sx={{ display: "flex", gap: "32px", justifyContent: "center" }}
@@ -81,7 +103,7 @@ function TopSection() {
         <Grid item container sx={{ justifyContent: "center" }}>
           <DiscordBtn text={discord.text} link={discord.link} />
         </Grid>
-      </Box>
+      </SocialBox>
     </SectionGrid>
   );
 }

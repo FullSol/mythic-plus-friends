@@ -2,20 +2,29 @@ import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
+import { styled } from "@mui/material/styles";
+
+const StyedPaper = styled(Paper)`
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+  padding: 16px 16px 16px 16px;
+  @media (min-width: 900px) {
+    position: absolute;
+    max-width: 827px;
+    top: 100px;
+    left: 100px;
+  }
+  @media (min-width: 1200px) {
+    top: calc(25vh);
+  }
+`;
 
 function TitleCard(props) {
   const { title, subtitle, description } = props;
   return (
-    <Paper
-      component="header"
-      sx={{
-        backgroundColor: "rgba(0, 0, 0, .35)",
-        display: "flex",
-        flexFlow: "column nowrap",
-        gap: "16px",
-        padding: "16px 16px 16px 16px",
-      }}
-    >
+    <StyedPaper component="header" sx={{}}>
       <Typography variant="h1" component="h1">
         {title}
       </Typography>
@@ -25,7 +34,7 @@ function TitleCard(props) {
       <Typography variant="body1" component="p">
         {description}
       </Typography>
-    </Paper>
+    </StyedPaper>
   );
 }
 
