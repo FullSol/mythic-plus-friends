@@ -34,3 +34,8 @@ export const announcements = [
     date: "2022-01-27",
   },
 ];
+
+export const discord = {
+  text: "Join our discrod server",
+  link: "https://mpf.gg",
+};

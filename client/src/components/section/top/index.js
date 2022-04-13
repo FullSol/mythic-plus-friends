@@ -2,17 +2,22 @@ import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import { siteInfo, social as socialLinks } from "../../../data";
+import {
+  siteInfo,
+  social as socialLinks,
+  discord as discordLink,
+} from "../../../data";
 import Loading from "../loading";
 import { TitleCard } from "../../cards";
 import Logo from "../../logo";
 import Social from "../../social";
+
 import DiscordBtn from "../../buttons";
 
-const StyledBox = styled(Box)`
-  display: flex;
-  gap: 32px;
-`;
+// const StyledBox = styled(Box)`
+//   display: flex;
+//   gap: 32px;
+// `;
 
 const LogoBox = styled(Box)`
   position: absolute;
@@ -26,10 +31,7 @@ function TopSection() {
   const [subtitle, setSubtitle] = useState("");
   const [description, setDescription] = useState("");
   const [social, setSocial] = useState([]);
-  const [discord, setDiscord] = useState({
-    text: "Join our discrod server",
-    link: "https://mpf.gg",
-  });
+  const [discord, setDiscord] = useState({});
 
   useEffect(() => {
     // api/sections/top
@@ -38,6 +40,7 @@ function TopSection() {
     setSubtitle(home.subtitle);
     setDescription(home.description);
     setSocial(socialLinks);
+    setDiscord(discordLink);
   }, [title, subtitle, description]);
 
   if (title === "" || subtitle === "" || description === "") {
