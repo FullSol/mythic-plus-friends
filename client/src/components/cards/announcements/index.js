@@ -8,14 +8,10 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
 function AnnouncementCard(props) {
-  const { img, title, description, slug } = props;
-
-  const handleClick = (e) => {
-    console.log(slug);
-  };
+  const { img, title, description } = props;
 
   return (
-    <Card sx={{ maxWidth: 345 }} component="article">
+    <Card sx={{ width: 345 }} component="article">
       <CardMedia component="img" height="140" image={img} alt="green iguana" />
       <CardContent component="header">
         <Typography gutterBottom variant="h5" component="h5">
@@ -26,9 +22,7 @@ function AnnouncementCard(props) {
         </Typography>
       </CardContent>
       <CardActions component="p">
-        <Button onClick={handleClick} size="small">
-          Read more
-        </Button>
+        <Button size="small">Read more</Button>
       </CardActions>
     </Card>
   );
@@ -38,14 +32,14 @@ AnnouncementCard.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  slug: PropTypes.string,
+  // slug: PropTypes.string,
 };
 
 AnnouncementCard.defaultProps = {
   img: "/images/Finished_MythicLogos-1.png",
   title: "Mythic Plus Friends",
   description: "Buillding a better mythic plus community",
-  slug: "#",
+  // slug: "#",
 };
 
 export default AnnouncementCard;

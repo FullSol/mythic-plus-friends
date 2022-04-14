@@ -12,9 +12,7 @@ function AcademyCard() {
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
 
-  const handleClick = () => {
-    console.log(link);
-  };
+  const handleClick = () => {};
 
   return (
     <Card sx={{ maxWidth: 345 }} component="article">

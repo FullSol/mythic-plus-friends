@@ -19,18 +19,29 @@ export const social = [
 export const announcements = [
   {
     id: 1,
-    post: "Hey all, a bunch of people got together many from the WoW community to do a for fun League event today. We have M+ people, people that work with top guilds, Raider.IO staff etc. If you are looking for something fun to watch come check this out! (Note: all of us are terrible, this is for fun 🙂 )<br />Main Stream linked below ^.^<br /><a href='https://twitter.com/LHP64D/status/1472265427862491139'>Twitter</a><br />><a href='https://www.twitch.tv/samtalkz'>Twitch</a>",
+    title: "WoW Community League Event",
+    description:
+      "Hey all, a bunch of people got together many from the WoW community to do a for fun League event today. We have M+ people, people that work with top guilds, Raider.IO staff etc. If you are looking for something fun to watch come check this out! (Note: all of us are terrible, this is for fun 🙂 )<br />Main Stream linked below ^.^<br /><a href='https://twitter.com/LHP64D/status/1472265427862491139'>Twitter</a><br />><a href='https://www.twitch.tv/samtalkz'>Twitch</a>",
     date: "2021-12-18",
   },
-  { id: 2, post: "Merry Christmas everyone", date: "2021-12-25" },
+  {
+    id: 2,
+    title: "Holiday Cheer",
+    description: "Merry Christmas everyone",
+    date: "2021-12-25",
+  },
   {
     id: 3,
-    post: "Huge congratulations to our partners over at Raider.IO for their public beta launch of their new Recruitment System! Check out all of the details here!<br /><a href='https://twitter.com/RaiderIO_WoW/status/1485613645799305219'>Twitter</a>",
+    title: "Congrats Raider.io",
+    description:
+      "Huge congratulations to our partners over at Raider.IO for their public beta launch of their new Recruitment System! Check out all of the details here!<a href='https://twitter.com/RaiderIO_WoW/status/1485613645799305219'>Twitter</a>",
     date: "2022-01-24",
   },
   {
     id: 4,
-    post: "Today, we are officially launching the new LFG bot!  This bot has been something that's been in the works for a while now.  Not only will this help make group creation much easier in the server, but there are some extra features coming in the future that will make things even better!  I don't want to take up too much of your time, so here are the key points:<br />",
+    title: "LFG Bot Launch",
+    description:
+      "Today, we are officially launching the new LFG bot!  This bot has been something that's been in the works for a while now.  Not only will this help make group creation much easier in the server, but there are some extra features coming in the future that will make things even better!  I don't want to take up too much of your time, so here are the key points:<br />",
     date: "2022-01-27",
   },
 ];
