@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Logo from "../../logo";
 import { AcademyCard } from "../../cards";
