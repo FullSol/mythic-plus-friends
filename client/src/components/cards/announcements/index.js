@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
 function AnnouncementCard(props) {
-  const { img, title, description } = props;
+  const { img, title, description, btnText } = props;
 
   return (
     <Card sx={{ width: 345 }} component="article">
@@ -22,7 +22,7 @@ function AnnouncementCard(props) {
         </Typography>
       </CardContent>
       <CardActions component="p">
-        <Button size="small">Read more</Button>
+        <Button size="small">{btnText}</Button>
       </CardActions>
     </Card>
   );
@@ -33,6 +33,7 @@ AnnouncementCard.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   // slug: PropTypes.string,
+  btnText: PropTypes.string,
 };
 
 AnnouncementCard.defaultProps = {
@@ -40,6 +41,7 @@ AnnouncementCard.defaultProps = {
   title: "Mythic Plus Friends",
   description: "Buillding a better mythic plus community",
   // slug: "#",
+  btnText: "Read More",
 };
 
 export default AnnouncementCard;
