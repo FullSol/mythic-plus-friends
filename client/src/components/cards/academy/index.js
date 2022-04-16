@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import Logo from "../../logo";
+import PropTypes from "prop-types";
 
-function AcademyCard() {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [link, setLink] = useState("");
-
+function AcademyCard(props) {
+  const { title, description } = props;
   const handleClick = () => {};
 
   return (
@@ -32,5 +28,15 @@ function AcademyCard() {
     </Card>
   );
 }
+
+AcademyCard.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
+
+AcademyCard.defaultProps = {
+  title: "Blank",
+  description: "Blank",
+};
 
 export default AcademyCard;
