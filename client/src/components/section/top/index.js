@@ -95,10 +95,9 @@ function TopSection() {
           component="p"
           sx={{ display: "flex", gap: "32px", justifyContent: "center" }}
         >
-          {social.map((item) => {
-            console.log(item);
-            return <Social key={item.id} type={item.type} link={item.link} />;
-          })}
+          {social.map((item) => (
+            <Social key={item.id} type={item.type} link={item.link} />
+          ))}
         </Grid>
         <Grid item container sx={{ justifyContent: "center" }}>
           <DiscordBtn text={discord.text} link={discord.link} />

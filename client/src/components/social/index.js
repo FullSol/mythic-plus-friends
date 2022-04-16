@@ -24,7 +24,7 @@ function getIcon(iconType) {
 
 function Social(props) {
   const { type, link } = props;
-  console.log(link);
+
   const [icon, setIcon] = useState("");
 
   useEffect(() => {
