@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import {
-  siteInfo,
-  social as socialLinks,
-  discord as discordLink,
-} from "../../../data";
-import Loading from "../loading";
-import { TitleCard } from "../../cards";
+import TitleCardContainer from "../../../containers/TitleCardContainer";
+import SocialMediaContainer from "../../../containers/SocialMediaContainer";
+import DiscordServerBtnContainer from "../../../containers/DiscordServerBtnContainer";
 import Logo from "../../logo";
-import Social from "../../social";
-
-import DiscordBtn from "../../buttons";
 
 const LogoBox = styled(Box)`
   position: absolute;
@@ -64,43 +57,21 @@ const SocialBox = styled(Box)`
 `;
 
 function TopSection() {
-  const [title, setTitle] = useState("");
-  const [subtitle, setSubtitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [social, setSocial] = useState([]);
-  const [discord, setDiscord] = useState({});
-
-  useEffect(() => {
-    // api/sections/top
-    const { home } = siteInfo;
-    setTitle(home.title);
-    setSubtitle(home.subtitle);
-    setDescription(home.description);
-    setSocial(socialLinks);
-    setDiscord(discordLink);
-  }, [title, subtitle, description]);
-
-  if (title === "" || subtitle === "" || description === "") {
-    return <Loading />;
-  }
-
   return (
     <SectionGrid component="section">
       <LogoBox component="p" sx={{ opacity: "100% !important" }}>
         <Logo />
       </LogoBox>
-      <TitleCard title={title} subtitle={subtitle} description={description} />
+      <TitleCardContainer />
       <SocialBox component="section">
         <Grid
           component="p"
           sx={{ display: "flex", gap: "32px", justifyContent: "center" }}
         >
-          {social.map((item) => (
-            <Social key={item.id} type={item.type} link={item.link} />
-          ))}
+          <SocialMediaContainer />
         </Grid>
         <Grid item container sx={{ justifyContent: "center" }}>
-          <DiscordBtn text={discord.text} link={discord.link} />
+          <DiscordServerBtnContainer />
         </Grid>
       </SocialBox>
     </SectionGrid>

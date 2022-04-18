@@ -65,3 +65,5 @@ export const academyCard = {
     "  *201 is the more advanced project - teaching groups for people ready to step beyond the basics, and get up to 15+ and beyond." +
     "For more information, please check the pinned messages in the #mythic_plus_101 and #mythic_plus_201 channels.",
 };
+
+export const partners = [];
