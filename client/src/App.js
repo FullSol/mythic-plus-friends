@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import WebFont from "webfontloader";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Container from "@mui/material/Container";
+import {
+  TopSection,
+  AnnouncementSection,
+  AcademySection,
+  PartnerSection,
+} from "./components/section";
+
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 function App() {
+  useEffect(() => {
+    WebFont.load({
+      custom: { families: ["Dalelands"] },
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container
+        className="App"
+        maxWidth="false"
+        component="main"
+        sx={{ overflow: "hidden", position: "relative" }}
+      >
+        <TopSection />
+        <AnnouncementSection />
+        <AcademySection />
+        <PartnerSection />
+      </Container>
+    </ThemeProvider>
   );
 }
 
