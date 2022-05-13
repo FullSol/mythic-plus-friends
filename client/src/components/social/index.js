@@ -10,13 +10,13 @@ function getIcon(iconType) {
   // Switch case to return the correct icon
   switch (iconType) {
     case "facebook":
-      return <FacebookIcon sx={{ fontSize: "60px", opacity: ".56" }} />;
+      return <FacebookIcon sx={{ fontSize: "65px", opacity: ".56" }} />;
     case "twitter":
-      return <TwitterIcon />;
+      return <TwitterIcon sx={{ fontSize: "65px", opacity: ".56" }} />;
     case "youtube":
-      return <YouTubeIcon />;
+      return <YouTubeIcon sx={{ fontSize: "65px", opacity: ".56" }} />;
     case "instagram":
-      return <InstagramIcon />;
+      return <InstagramIcon sx={{ fontSize: "65px", opacity: ".56" }} />;
     default:
       return null;
   }
@@ -33,7 +33,7 @@ function Social(props) {
   }, [type]);
 
   // Don't return if there is nothing to return
-  if (icon === "" || icon === null) {
+  if (icon === "" || icon === null || link === null || link === "") {
     return null;
   }
 
@@ -41,8 +41,13 @@ function Social(props) {
   return (
     <a href={link}>
       <Avatar
-        sx={{ height: 65, width: 65, backgroundColor: "rgba(255,255,255,0)" }}
-        component="p"
+        sx={{
+          height: 65,
+          width: 65,
+          backgroundColor: "rgba(255,255,255,0)",
+          color: "info.light",
+        }}
+        component="span"
       >
         {icon}
       </Avatar>

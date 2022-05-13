@@ -8,7 +8,7 @@ function Logo(props) {
     <Avatar
       alt="mythic plus friends logo"
       src="/images/Finished_MythicLogos-1.png"
-      component="p"
+      component="span"
       sx={{ width: size, height: size }}
     />
   );
