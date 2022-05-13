@@ -16,6 +16,7 @@ function AnnuoncementCardContainer() {
     <>
       {announcements.map((item) => (
         <AnnouncementCard
+          key={item.id}
           img={item.img}
           title={item.title}
           description={item.description}

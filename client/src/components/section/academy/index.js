@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Logo from "../../logo";
-import { AcademyCard } from "../../cards";
-import { siteInfo, academyCard as academyCardData } from "../../../data";
+import AcademyCardContainer from "../../../containers/AcademyCardContainer";
+import { siteInfo } from "../../../data";
 
 function AcademySection() {
   const [heading, setHeading] = useState("");
@@ -16,8 +16,6 @@ function AcademySection() {
 
     setHeading(academy.heading);
     setSubHeading(academy.subHeading);
-    setCardTitle(academyCardData.title);
-    setCardDescription(academyCardData.description);
   });
 
   return (
@@ -31,7 +29,7 @@ function AcademySection() {
         </Typography>
         <Grid>
           <Logo />
-          <AcademyCard title={cardTitle} description={cardDescription} />
+          <AcademyCardContainer />
         </Grid>
       </Grid>
     </Grid>

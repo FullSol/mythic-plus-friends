@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
 function AcademyCard(props) {
-  const { title, description } = props;
+  const { title, description, btnText } = props;
   const handleClick = () => {};
 
   return (
@@ -22,7 +22,7 @@ function AcademyCard(props) {
       </CardContent>
       <CardActions component="p">
         <Button onClick={handleClick} size="small">
-          Read more
+          {btnText}
         </Button>
       </CardActions>
     </Card>
@@ -32,11 +32,13 @@ function AcademyCard(props) {
 AcademyCard.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  btnText: PropTypes.string,
 };
 
 AcademyCard.defaultProps = {
   title: "Blank",
   description: "Blank",
+  btnText: "Read More",
 };
 
 export default AcademyCard;
